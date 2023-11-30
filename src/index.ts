@@ -8,6 +8,8 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+import { waveText } from './svg';
+
 export interface Env {
 	// Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
 	// MY_KV_NAMESPACE: KVNamespace;
@@ -27,6 +29,18 @@ export interface Env {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+		const { searchParams } = new URL(request.url);
+		const src = searchParams.get('src');
+		if (src === 'instagram') {
+			return new Response(waveText('LOADING', 0, 0, 0), {
+				headers: {
+					'content-type': 'image/svg+xml',
+					'cache-control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+					pragma: 'no-cache',
+					expires: '0',
+				},
+			});
+		}
 		return new Response('Hello World!');
 	},
 };
