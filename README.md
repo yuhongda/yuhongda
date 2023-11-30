@@ -1,6 +1,9 @@
-### Hi there 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="http://127.0.0.1:8787?src=say-hi&theme=dark">
+  <img src="http://127.0.0.1:8787?src=say-hi" width="100%" align="left">
+</picture>
 
-[instagram](https://www.instagram.com/yuhongda)
+<!-- [instagram](https://www.instagram.com/yuhongda) -->
 
 <!--
 **yuhongda/yuhongda** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

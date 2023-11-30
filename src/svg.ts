@@ -1,67 +1,54 @@
-export const waveText = (text: string, x: number, y: number, fontSize: number) => {
+export const svg = (html: string, style: string) => {
 	return `
-    <svg class="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="574.558px" height="120px" viewBox="0 0 574.558 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
-     <style>
-     .loading {
-        margin-top: 20px;
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none">
+      <foreignObject width="100%" height="100%">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+          <style>${style}</style>
+          <div>${html}</div>
+        </body>
+      </foreignObject>
+    </svg>`;
+};
+
+export const sayHi = (theme?: string) => {
+	const color = theme === 'dark' ? '#B1BBCC' : '#000';
+	const html = `<h1>Hi there</h1>`;
+	const style = `
+    h1 {
+      color: ${color};
+      animation: fade-in 2s ease-in-out;
+    }
+    h1::after {
+      content: '👋';
+      display: inline-block;
+      margin-left:8px;
+      animation: wave-hand 1s 2s ease-in-out infinite;
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
       }
-      .water-fill {
-        -webkit-animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
-                animation: wave 0.7s infinite linear, fill-up 10s infinite ease-out alternate;
+      100% {
+        opacity: 1;
+        transform: translateX(0);
       }
-      @-webkit-keyframes wave {
-        0% {
-          x: -400px;
-        }
-        100% {
-          x: 0;
-        }
+    }
+
+    @keyframes wave-hand {
+      0% {
+        transform: rotate(0deg);
       }
-      @keyframes wave {
-        0% {
-          x: -400px;
-        }
-        100% {
-          x: 0;
-        }
+      25% {
+        transform: rotate(10deg);
       }
-      @-webkit-keyframes fill-up {
-        0% {
-          height: 0;
-          y: 130px;
-        }
-        100% {
-          height: 160px;
-          y: -30px;
-        }
+      75% {
+        transform: rotate(-10deg);
       }
-      @keyframes fill-up {
-        0% {
-          height: 0;
-          y: 130px;
-        }
-        100% {
-          height: 160px;
-          y: -30px;
-        }
+      100% {
+        transform: rotate(0deg);
       }
-  </style>
-  <defs>
-    <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
-      <path fill="#fff" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
-    </pattern>
-    
-    <text id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Cabin Condensed'" font-size="161.047">LOADING</text>
-    
-    <mask id="text_mask">
-      <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"/>
-    </mask>
-  </defs>
- 
-	  <!--<use x="0" y="0" xlink:href="#text" fill="#222"/>-->
-  
-  <rect class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120"/>
-  
-</svg>`;
+    }
+  `;
+	return svg(html, style);
 };
