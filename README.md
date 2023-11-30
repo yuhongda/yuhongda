@@ -1,5 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="http://127.0.0.1:8787?src=say-hi&theme=dark">
+  <source media="(prefers-color-scheme: dark)" srcset="https://yuhongda.silverage-y.workers.dev/?src=say-hi&theme=dark">
   <img src="http://127.0.0.1:8787?src=say-hi" width="100%" align="left">
 </picture>
 
