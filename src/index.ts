@@ -8,7 +8,7 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-import { sayHi } from './svg';
+import { sayHi, instagram } from './svg';
 
 export interface Env {
 	// Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -35,6 +35,9 @@ export default {
 		let content = '';
 		if (src === 'say-hi') {
 			content = sayHi(theme);
+		}
+		if (src === 'instagram') {
+			content = instagram(theme);
 		}
 		return new Response(content, {
 			headers: {

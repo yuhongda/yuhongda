@@ -1,15 +1,20 @@
 {
-  "name": "yuhongda",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230419.0",
-    "typescript": "^5.0.4",
-    "wrangler": "^3.0.0"
-  }
+	"name": "yuhongda",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"ig": "node --loader ts-node/esm scripts/ig.ts"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230419.0",
+		"@types/node": "^20.10.3",
+		"node-fetch": "^3.3.2",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.4",
+		"wrangler": "^3.0.0"
+	}
 }

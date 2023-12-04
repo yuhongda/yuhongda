@@ -1,9 +1,13 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://yuhongda.silverage-y.workers.dev/?src=say-hi&theme=dark">
-  <img src="http://127.0.0.1:8787?src=say-hi" width="100%" align="left">
+  <img src="https://yuhongda.silverage-y.workers.dev/?src=say-hi" width="100%" align="left">
 </picture>
-
-<!-- [instagram](https://www.instagram.com/yuhongda) -->
+<a href="https://www.instagram.com/yuhongda">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=dark">
+    <img src="https://yuhongda.silverage-y.workers.dev/?src=instagram" width="100%" align="left">
+  </picture>
+</a>
 
 <!--
 **yuhongda/yuhongda** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
