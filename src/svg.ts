@@ -26,6 +26,7 @@ export const sayHi = (theme?: string) => {
 	const html = `<h1>Hi there</h1>`;
 	const style = `
     h1 {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
       font-size: 16px;
       color: ${color};
       animation: fade-in 2s ease-in-out;
@@ -75,6 +76,7 @@ export const instagram = (theme?: string) => {
 	const html = `<h1>Follow me on Instagram 🚀</h1><ul>${items}</ul>`;
 	const style = `
     h1 {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
       font-size: 16px;
       color: ${color};
       animation: fade-in 2s ease-in-out;
