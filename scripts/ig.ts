@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import { writeFile } from 'node:fs/promises';
 
 async function fetchInstagram() {
-	const response = await fetch(`https://graph.instagram.com/me/media?access_token=${process.env.ACCESS_TOKEN}}`, {
+	const response = await fetch(`https://graph.instagram.com/me/media?access_token=${process.env.IG_TOKEN}}`, {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',
@@ -18,7 +18,7 @@ async function fetchInstagram() {
 		const top3 = json.data.slice(0, 3);
 		for (let i = 0; i < top3.length; i++) {
 			const response = await fetch(
-				`https://graph.instagram.com/${top3[i].id}?fields=media_url,thumbnail_url&access_token=${process.env.ACCESS_TOKEN}}`,
+				`https://graph.instagram.com/${top3[i].id}?fields=media_url,thumbnail_url&access_token=${process.env.IG_TOKEN}}`,
 				{
 					method: 'GET',
 					headers: {
