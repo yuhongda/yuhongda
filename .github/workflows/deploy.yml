@@ -20,7 +20,7 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Install Deps
-        run: pnpm i
+        run: pnpm install --no-frozen-lockfile
       - name: generate ig
         run: pnpm run ig
         env:
