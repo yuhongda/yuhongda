@@ -125,5 +125,5 @@ export const instagram = (theme?: string) => {
       }
     }
   `;
-	return svg(html, style, { height: 500 });
+	return svg(html, style, { height: 514 });
 };
