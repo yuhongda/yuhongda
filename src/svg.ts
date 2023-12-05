@@ -100,6 +100,7 @@ export const instagram = (theme?: string) => {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      animation-fill-mode: forwards;
     }
     li:nth-child(1) {
       animation: drop-in 0.5s cubic-bezier(.17,.67,.6,1.3);
