@@ -2,6 +2,7 @@
 'use strict';
 import fetch from 'node-fetch';
 import { writeFile } from 'node:fs/promises';
+import sharp from 'sharp';
 
 async function fetchInstagram() {
 	const response = await fetch(`https://graph.instagram.com/me/media?access_token=${process.env.IG_TOKEN}}`, {
@@ -29,10 +30,15 @@ async function fetchInstagram() {
 			);
 			const d = (await response.json()) as any;
 
-			// convert to base64
-			const base64 = await fetch(d.media_url)
-				.then((res) => res.arrayBuffer())
-				.then((buf) => Buffer.from(buf).toString('base64'));
+			// resize image to 50% of original size and convert to base64
+			const arrayBuffer = await fetch(d.media_url).then((res) => res.arrayBuffer());
+			const imageBuffer = Buffer.from(arrayBuffer);
+			const metadata = (await sharp(imageBuffer).metadata()) as any;
+			const resizedImageBuffer = await sharp(imageBuffer)
+				.resize({ width: Math.round(metadata.width / 4) })
+				.toBuffer();
+			const base64 = resizedImageBuffer.toString('base64');
+
 			posts.push({
 				...d,
 				base64,
