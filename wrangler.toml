@@ -1,6 +1,7 @@
 name = "yuhongda"
 main = "src/index.ts"
 compatibility_date = "2023-11-21"
+account_id = "c13df90ce637fbeca25b08ff04271fa8"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
