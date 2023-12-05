@@ -17,10 +17,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install Deps
-        run: npm i
+        run: pnpm i
       - name: generate ig
-        run: npm run ig
+        run: pnpm run ig
         env:
           IG_TOKEN: ${{secrets.IG_TOKEN}}
       - uses: actions/checkout@v3
