@@ -15,7 +15,7 @@ async function fetchInstagram() {
 
 	if (json.data.length > 0) {
 		let posts = [];
-		const top3 = json.data.slice(0, 3);
+		const top3 = json.data.slice(0, 9);
 		for (let i = 0; i < top3.length; i++) {
 			const response = await fetch(
 				`https://graph.instagram.com/${top3[i].id}?fields=media_url,thumbnail_url&access_token=${process.env.IG_TOKEN}}`,

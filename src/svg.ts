@@ -88,6 +88,7 @@ export const instagram = (theme?: string) => {
       flex-wrap: wrap;
       margin: -4px;
       animation: fade-in 2s ease-in-out;
+      width: 500px;
     }
     li {
       list-style: none;
@@ -95,7 +96,7 @@ export const instagram = (theme?: string) => {
       height: 150px;
       margin: 0;
       padding: 0;
-      margin-right: 8px;
+      margin: 0 8px 8px 0;
       border-radius: 4px;
       background-size: cover;
       background-position: center;
@@ -113,5 +114,5 @@ export const instagram = (theme?: string) => {
       }
     }
   `;
-	return svg(html, style, { height: 200 });
+	return svg(html, style, { height: 500 });
 };
