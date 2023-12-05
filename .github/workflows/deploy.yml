@@ -21,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Use taobao registry
+        run: npm config set registry https://registry.npmmirror.com/
       - name: Install Deps
         run: pnpm install --frozen-lockfile
       - name: generate ig
