@@ -32,4 +32,6 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
+      - name: Install Deps
+        run: npm i
       - run: npm run deploy
