@@ -102,6 +102,17 @@ export const instagram = (theme?: string) => {
       background-position: center;
       background-repeat: no-repeat;
     }
+    @media (max-width: 750px) {
+      ul {
+        width: 330px;
+      }
+
+      li {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
 
     @keyframes fade-in {
       0% {
