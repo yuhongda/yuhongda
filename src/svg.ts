@@ -101,33 +101,35 @@ export const instagram = (theme?: string) => {
       background-position: center;
       background-repeat: no-repeat;
       animation-fill-mode: forwards;
+      transform: scale(1.3);
+      opacity: 0;
     }
     li:nth-child(1) {
-      animation: drop-in 0.5s cubic-bezier(.17,.67,.6,1.3);
+      animation: drop-in 0.5s cubic-bezier(.17,.67,.6,1.3) forwards;
     }
     li:nth-child(2) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.1s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.1s forwards;
     }
     li:nth-child(3) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s forwards;
     }
     li:nth-child(4) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.3s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.3s forwards;
     }
     li:nth-child(5) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.3s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.3s forwards;
     }
     li:nth-child(6) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s forwards;
     }
     li:nth-child(7) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.2s forwards;
     }
     li:nth-child(8) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.7s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.7s forwards;
     }
     li:nth-child(9) {
-      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.1s;
+      animation: drop-in 1s cubic-bezier(.17,.67,.6,1.3) 0.1s forwards;
     }
     @media (max-width: 750px) {
       ul {
@@ -154,7 +156,7 @@ export const instagram = (theme?: string) => {
     @keyframes drop-in {
       0% {
         opacity: 0;
-        transform: scale(1.5);
+        transform: scale(1.3);
       }
       100% {
         opacity: 1;
