@@ -14,13 +14,15 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Install Deps
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: generate ig
         run: pnpm run ig
         env:
