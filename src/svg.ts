@@ -66,7 +66,12 @@ export const sayHi = (theme?: string) => {
 	return svg(html, style, { height: 50 });
 };
 
-export const instagram = (theme?: string) => {
+export interface InstagramProps {
+	theme?: string;
+	height?: string | null;
+}
+
+export const instagram = ({ theme, height }: InstagramProps) => {
 	const color = theme === 'dark' ? '#B1BBCC' : '#000';
 	const items = ig
 		.map((item: any) => {
@@ -164,5 +169,5 @@ export const instagram = (theme?: string) => {
       }
     }
   `;
-	return svg(html, style, { height: 514 });
+	return svg(html, style, { height: height ?? 514 });
 };

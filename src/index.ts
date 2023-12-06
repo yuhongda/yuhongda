@@ -32,12 +32,13 @@ export default {
 		const { searchParams } = new URL(request.url);
 		const src = searchParams.get('src');
 		const theme = searchParams.get('theme') || 'light';
+		const height = searchParams.get('height');
 		let content = '';
 		if (src === 'say-hi') {
 			content = sayHi(theme);
 		}
 		if (src === 'instagram') {
-			content = instagram(theme);
+			content = instagram({ theme, height });
 		}
 		return new Response(content, {
 			headers: {
