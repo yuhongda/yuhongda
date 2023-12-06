@@ -6,7 +6,8 @@
   <picture>
     <source media="(prefers-color-scheme: dark) and (max-width: 750px)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=dark&height=350">
     <source media="(prefers-color-scheme: light) and (max-width: 750px)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=light&height=350">
-    <source media="(prefers-color-scheme: dark)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=dark">
+    <source media="(prefers-color-scheme: dark) and (min-width: 750px)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=dark">
+    <source media="(prefers-color-scheme: light) and (min-width: 750px)" srcset="https://yuhongda.silverage-y.workers.dev/?src=instagram&theme=light">
     <img src="https://yuhongda.silverage-y.workers.dev/?src=instagram" width="100%" align="left">
   </picture>
 </a>
