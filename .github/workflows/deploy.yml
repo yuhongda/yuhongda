@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    schedule:
+      # Schedule to run at 00:00 and 12:00 every day
+      - cron: '0 0,12 * * *'
 
 jobs:
   deploy:
