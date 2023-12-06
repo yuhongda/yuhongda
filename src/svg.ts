@@ -169,5 +169,5 @@ export const instagram = ({ theme, height }: InstagramProps) => {
       }
     }
   `;
-	return svg(html, style, { height: height ?? 514 });
+	return svg(html, style, { height: height || 514 });
 };
