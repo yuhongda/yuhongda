@@ -14,7 +14,7 @@ async function fetchInstagram() {
 	});
 	const json = (await response.json()) as any;
 
-	if (json.data.length > 0) {
+	if (json.data?.length > 0) {
 		let posts = [];
 		const top3 = json.data.slice(0, 9);
 		for (let i = 0; i < top3.length; i++) {
